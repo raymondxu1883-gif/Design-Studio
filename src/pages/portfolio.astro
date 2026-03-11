@@ -11,63 +11,63 @@ const portfolioItems = [
     category: 'Signage',
     description: 'Backlit acrylic signage for retail boutique',
     client: 'Luxe Fashion Store',
-    image: '/images/portfolio-1.jpg'
+    image: '/images/work-signage.jpg'
   },
   {
     title: 'Wedding Welcome Mirror',
     category: 'Events',
     description: 'Custom calligraphy on round mirror',
     client: 'Sarah & David Wedding',
-    image: '/images/portfolio-2.jpg'
+    image: '/images/work-wedding.jpg'
   },
   {
     title: 'Trade Show Booth Display',
     category: 'Banners',
     description: '10x10 ft retractable banner system',
     client: 'TechStartup Inc.',
-    image: '/images/portfolio-3.jpg'
+    image: '/images/work-banner.jpg'
   },
   {
     title: 'Product Label Set',
     category: 'Stickers',
     description: 'Waterproof labels for skincare line',
     client: 'Glow Beauty Co.',
-    image: '/images/portfolio-4.jpg'
+    image: '/images/work-stickers.jpg'
   },
   {
     title: 'PVC Office Directory',
     category: 'Signage',
     description: 'Modern directory for office building',
     client: 'Metro Business Center',
-    image: '/images/portfolio-5.jpg'
+    image: '/images/work-pvc.jpg'
   },
   {
     title: 'Brand Identity Package',
     category: 'Branding',
     description: 'Complete logo and stationery design',
     client: 'Artisan Coffee Roasters',
-    image: '/images/portfolio-6.jpg'
+    image: '/images/work-branding.jpg'
   },
   {
     title: 'Event Seating Chart',
     category: 'Events',
     description: 'Large format poster seating chart',
     client: 'Grand Hotel Wedding',
-    image: '/images/portfolio-7.jpg'
+    image: '/images/work-seating.jpg'
   },
   {
     title: 'Menu Board Design',
     category: 'Print',
     description: 'Chalkboard-style menu for cafe',
     client: 'The Corner Cafe',
-    image: '/images/portfolio-8.jpg'
+    image: '/images/work-menu.jpg'
   },
   {
     title: 'Car Decal Wrap',
     category: 'Stickers',
     description: 'Partial wrap for service vehicle',
     client: 'Quick Fix Plumbing',
-    image: '/images/portfolio-9.jpg'
+    image: '/images/work-car-decal.jpg'
   }
 ];
 ---
@@ -112,10 +112,12 @@ const portfolioItems = [
           {portfolioItems.map((item, index) => (
             <div class="portfolio-item group" data-category={item.category.toLowerCase()}>
               <div class="card overflow-hidden">
-                <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-gray-400 text-sm">{item.title}</span>
-                  </div>
+                <div class="relative aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                   <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div class="absolute bottom-0 left-0 right-0 p-6">
                       <p class="text-white/80 text-sm mb-2">{item.description}</p>
