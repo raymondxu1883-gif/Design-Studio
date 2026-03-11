@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const contactInfo = [
+  {
+    icon: 'email',
+    title: 'Email',
+    value: 'hello@luminadesign.studio',
+    link: 'mailto:hello@luminadesign.studio'
+  },
+  {
+    icon: 'time',
+    title: 'Response Time',
+    value: 'Within 24 hours',
+    link: null
+  },
+  {
+    icon: 'location',
+    title: 'Location',
+    value: 'Serving clients worldwide',
+    link: null
+  }
+];
+
+const projectTypes = [
+  'Signage Design',
+  'Banner / Display',
+  'Custom Stickers',
+  'Event Signage',
+  'Print Design',
+  'Brand Identity',
+  'Other'
+];
+---
+
+<Layout 
+  title="Contact"
+  description="Get in touch with Lumina Design Studio for a free quote on your signage and print design project."
+>
+  <Navigation />
+  
+  <main class="pt-24">
+    <!-- Header -->
+    <section class="bg-gray-50 py-16">
+      <div class="container mx-auto px-6 text-center">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
+          Let's Start Your Project
+        </h1>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Tell us about your project and we'll get back to you with a free quote within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- Contact Info -->
+          <div class="lg:col-span-1">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <div class="space-y-6">
+              {contactInfo.map(info => (
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    {info.icon === 'email' && (
+                      <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                    )}
+                    {info.icon === 'time' && (
+                      <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    )}
+                    {info.icon === 'location' && (
+                      <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">{info.title}</h3>
+                    {info.link ? (
+                      <a href={info.link} class="text-orange-500 hover:underline">{info.value}</a>
+                    ) : (
+                      <p class="text-gray-600">{info.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div class="mt-10 p-6 bg-gray-50 rounded-2xl">
+              <h3 class="font-semibold text-gray-900 mb-3">What to expect:</h3>
+              <ul class="space-y-2 text-gray-600 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Response within 24 hours
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Free, no-obligation quote
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Project consultation included
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="lg:col-span-2">
+            <div class="card p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+              
+              <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We\\'ll get back to you within 24 hours.');">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="project-type" class="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+                    <select 
+                      id="project-type" 
+                      name="project-type"
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors bg-white"
+                    >
+                      <option value="">Select a project type</option>
+                      {projectTypes.map(type => (
+                        <option value={type.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '')}>{type}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label for="timeline" class="block text-sm font-medium text-gray-700 mb-2">Timeline</label>
+                    <select 
+                      id="timeline" 
+                      name="timeline"
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors bg-white"
+                    >
+                      <option value="">When do you need it?</option>
+                      <option value="asap">ASAP (Rush)</option>
+                      <option value="1-2-weeks">1-2 weeks</option>
+                      <option value="2-4-weeks">2-4 weeks</option>
+                      <option value="1-month+">1 month+</option>
+                      <option value="flexible">Flexible</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
+                  <select 
+                    id="budget" 
+                    name="budget"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors bg-white"
+                  >
+                    <option value="">Select your budget range</option>
+                    <option value="under-500">Under $500</option>
+                    <option value="500-1000">$500 - $1,000</option>
+                    <option value="1000-2500">$1,000 - $2,500</option>
+                    <option value="2500-5000">$2,500 - $5,000</option>
+                    <option value="5000+">$5,000+</option>
+                    <option value="not-sure">Not sure yet</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors resize-none"
+                    placeholder="Tell us about your project: what you need, the size, materials, any design preferences or inspiration..."
+                  ></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-full md:w-auto text-lg px-8">
+                  Send Message
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-gray-50">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <div class="text-center mb-12">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
+          <h2 class="text-3xl font-bold text-gray-900 mt-2">
+            Common Questions
+          </h2>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">How quickly will I receive a response?</h3>
+            <p class="text-gray-600">We respond to all inquiries within 24 hours, often much sooner. For urgent projects, please mention it in your message.</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Is the quote really free?</h3>
+            <p class="text-gray-600">Absolutely! We provide detailed, no-obligation quotes for all projects. You'll know exactly what you're getting and how much it costs before any work begins.</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">What information should I include?</h3>
+            <p class="text-gray-600">The more details the better! Include project type, dimensions, quantity, materials preference, timeline, and any design inspiration or examples you like.</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Do you work with international clients?</h3>
+            <p class="text-gray-600">Yes! We work with clients worldwide. For physical products, we can ship internationally or provide files for local production—whatever works best for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

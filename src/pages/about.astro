@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const stats = [
+  { number: '500+', label: 'Projects Completed' },
+  { number: '98%', label: 'Client Satisfaction' },
+  { number: '8+', label: 'Years Experience' },
+  { number: '30+', label: 'Countries Served' },
+];
+
+const values = [
+  {
+    title: 'Quality First',
+    description: 'We never compromise on quality. Every design is crafted with attention to detail and precision.',
+    icon: 'quality'
+  },
+  {
+    title: 'Client Focused',
+    description: 'Your vision is our priority. We listen, collaborate, and deliver designs that exceed expectations.',
+    icon: 'client'
+  },
+  {
+    title: 'Creative Excellence',
+    description: 'We combine creativity with strategy to create designs that are both beautiful and effective.',
+    icon: 'creative'
+  },
+  {
+    title: 'Global Perspective',
+    description: 'Our international trade background gives us unique insights into diverse markets and audiences.',
+    icon: 'global'
+  }
+];
+---
+
+<Layout 
+  title="About Us"
+  description="Learn about Lumina Design Studio. With 8+ years of experience in design and international trade, we deliver quality signage and print solutions worldwide."
+>
+  <Navigation />
+  
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">About Us</span>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
+            Passionate About Design, <br/>Committed to Excellence
+          </h1>
+          <p class="text-xl text-gray-600">
+            We bridge the gap between creative vision and practical execution, delivering designs that make an impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-orange-100 via-orange-50 to-gray-100 flex items-center justify-center">
+              <span class="text-gray-400">Designer Workspace</span>
+            </div>
+          </div>
+          
+          <div class="order-1 lg:order-2">
+            <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Story</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+              From International Trade to Creative Design
+            </h2>
+            <div class="space-y-4 text-gray-600">
+              <p>
+                Lumina Design Studio was born from a unique combination of experiences. With over 8 years in international trade and a passion for graphic design, we bring a distinctive perspective to every project.
+              </p>
+              <p>
+                Our journey began in the world of import-export, where we developed a deep understanding of global markets, quality standards, and the importance of clear communication across cultures. This experience shapes how we approach design today—we understand that great design isn't just about aesthetics; it's about achieving business goals.
+              </p>
+              <p>
+                Today, we've completed over 500 projects for clients across 30+ countries. From small local businesses to international brands, we've helped create signage and print materials that stand out and drive results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map(stat => (
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">{stat.number}</div>
+              <div class="text-gray-400">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Values</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            What Drives Us
+          </h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          {values.map(value => (
+            <div class="card p-8">
+              <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                {value.icon === 'quality' && (
+                  <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                  </svg>
+                )}
+                {value.icon === 'client' && (
+                  <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                )}
+                {value.icon === 'creative' && (
+                  <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                  </svg>
+                )}
+                {value.icon === 'global' && (
+                  <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                )}
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+              <p class="text-gray-600">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section class="section bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+              What Makes Us Different
+            </h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">1</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Design + Business Understanding</h3>
+                  <p class="text-gray-600">We don't just create pretty designs—we understand your business goals and create solutions that help you achieve them.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">2</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">End-to-End Service</h3>
+                  <p class="text-gray-600">From initial concept to finished product, we handle everything. No need to coordinate between designers and printers.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">3</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Global Experience</h3>
+                  <p class="text-gray-600">Having worked with clients from over 30 countries, we understand diverse markets and cultural nuances.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">4</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Unlimited Revisions</h3>
+                  <p class="text-gray-600">We're not happy until you are. That's why we offer unlimited revisions on all design projects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+              <span class="text-gray-400">Workspace / Process</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-orange-500">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Let's Work Together
+        </h2>
+        <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+          Ready to bring your vision to life? We'd love to hear about your project.
+        </p>
+        <a href="/contact" class="btn bg-white text-orange-500 hover:bg-gray-100 text-lg px-8">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
