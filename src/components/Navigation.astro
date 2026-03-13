@@ -1,10 +1,10 @@
 ---
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/portfolio.html', label: 'Portfolio' },
-  { href: '/services.html', label: 'Services' },
-  { href: '/about.html', label: 'About' },
-  { href: '/contact.html', label: 'Contact' },
+  { href: './', label: 'Home' },
+  { href: './portfolio.html', label: 'Portfolio' },
+  { href: './services.html', label: 'Services' },
+  { href: './about.html', label: 'About' },
+  { href: './contact.html', label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -14,7 +14,7 @@ const currentPath = Astro.url.pathname;
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-orange-500 transition-colors">
+      <a href="./" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-orange-500 transition-colors">
         <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="8" fill="#1a1a1a"/>
           <path d="M10 20L16 14L22 20L30 12V28H10V20Z" fill="#ff6b35"/>
@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
         <a 
-          href="/contact" 
+          href="./contact.html" 
           class="btn btn-primary text-sm"
         >
           Get a Quote
@@ -65,7 +65,7 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
         <a 
-          href="/contact" 
+          href="./contact.html" 
           class="btn btn-primary text-sm w-full text-center"
         >
           Get a Quote
