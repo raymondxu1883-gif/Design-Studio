@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://raymondxu1883-gif.github.io',
+  site: 'https://signsmithstudio.com',
   vite: {
     plugins: [tailwindcss()]
   },
