@@ -15,7 +15,7 @@ const {
   canonicalURL = Astro.url.pathname
 } = Astro.props;
 
-const siteTitle = "Lumina Design Studio";
+const siteTitle = "SignSmith Studio";
 const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 ---
 
@@ -29,7 +29,7 @@ const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   <!-- Primary Meta Tags -->
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
-  <meta name="author" content="Lumina Design Studio" />
+  <meta name="author" content="SignSmith Studio" />
   
   <!-- Canonical URL -->
   <link rel="canonical" href={`https://your-studio.github.io${canonicalURL}`} />
@@ -61,7 +61,7 @@ const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     {{
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Lumina Design Studio",
+      "name": "SignSmith Studio",
       "description": "Professional signage and print design services",
       "url": "https://your-studio.github.io",
       "image": "https://your-studio.github.io/images/logo.png",
