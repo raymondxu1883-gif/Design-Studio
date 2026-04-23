@@ -3,140 +3,140 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-const pageTitle = "SignSmith Services | Easy & Affordable Sign Design";
-const pageDescription = "Professional sign design and production for small businesses. No design experience needed — we guide you from concept to finished product.";
+const pageTitle = "SignSmith Services | Custom Banners, Signs & Displays";
+const pageDescription = "Custom banners, signs, displays, and marketing materials for small businesses. Design + Print + Ship — we handle everything from concept to delivery.";
 
 const services = [
   {
-    id: 'signage',
+    id: 'banners',
+    icon: 'banner',
+    title: 'Custom Banners',
+    shortDesc: 'Vinyl banners for every occasion',
+    fullDesc: 'High-quality vinyl banners in any size. Perfect for events, promotions, grand openings, trade shows, and outdoor advertising. Durable, weather-resistant, and vibrant full-color printing.',
+    image: '/images/work-banner.jpg',
+    features: [
+      'Vinyl banners (all sizes)',
+      'Mesh banners for windy areas',
+      'Retractable banner stands',
+      'Pop-up & step-repeat backdrops',
+      'Grommets & hemming included',
+      'Same-day rush available'
+    ],
+    priceRange: 'From $25',
+    turnaround: '1-3 days'
+  },
+  {
+    id: 'signs',
     icon: 'signage',
-    title: 'Custom Signage',
-    shortDesc: 'Professional signs for every need',
-    fullDesc: 'From storefront signs to office directories, we design AND manufacture signage that captures attention. With direct factory partnerships, we deliver quality signs at competitive prices. Available in acrylic, PVC, metal, wood, and more.',
+    title: 'Yard Signs & Decals',
+    shortDesc: 'Signs that get you noticed',
+    fullDesc: 'From real estate yard signs to window decals and vehicle magnets. Corrugated plastic signs, magnetic car signs, die-cut decals, and more — designed, printed, and shipped to your door.',
     image: '/images/work-signage.jpg',
     features: [
-      'Indoor & outdoor signage',
-      'Acrylic & PVC signs',
-      'Dimensional lettering',
-      'Backlit & illuminated signs',
-      'ADA compliant signage',
-      'Wayfinding systems'
+      'Corrugated plastic yard signs',
+      'Real estate & political signs',
+      'Vehicle magnets & car decals',
+      'Window decals & clings',
+      'Floor decals & wall graphics',
+      'Aluminum & rigid signs'
+    ],
+    priceRange: 'From $15',
+    turnaround: '2-4 days'
+  },
+  {
+    id: 'flags',
+    icon: 'flag',
+    title: 'Advertising Flags',
+    shortDesc: 'Stand tall, get noticed',
+    fullDesc: 'Custom feather flags, teardrop flags, and blade flags that wave your message to the world. Perfect for storefronts, events, and outdoor promotions. Includes pole kit and ground stake.',
+    image: '/images/work-car-decal.jpg',
+    features: [
+      'Feather flags (swooper flags)',
+      'Teardrop flags',
+      'Rectangular blade flags',
+      'Custom flag pole kits',
+      'Ground stakes & bases',
+      'Single or double-sided'
+    ],
+    priceRange: 'From $65',
+    turnaround: '3-5 days'
+  },
+  {
+    id: 'displays',
+    icon: 'display',
+    title: 'Trade Show Displays',
+    shortDesc: 'Professional booth setups',
+    fullDesc: 'Complete trade show display solutions — from table covers to full booth packages. Step & repeat backdrops, canopy tents, table runners, and branded displays that make you stand out.',
+    image: '/images/work-branding.jpg',
+    features: [
+      'Step & repeat backdrops',
+      'Custom canopy tents (10x10)',
+      'Table covers & runners',
+      'Pop-up display walls',
+      'X-banner & L-banner stands',
+      'Complete booth packages'
     ],
     priceRange: 'From $150',
     turnaround: '5-7 days'
   },
   {
-    id: 'banners',
-    icon: 'banner',
-    title: 'Banners & Displays',
-    shortDesc: 'Make an impact at any event',
-    fullDesc: 'We design and produce high-quality vinyl banners and display systems for trade shows, events, and promotions. From design to finished product — all in-house for better quality control.',
-    image: '/images/work-banner.jpg',
+    id: 'marketing',
+    icon: 'print',
+    title: 'Marketing Materials',
+    shortDesc: 'Print essentials for your business',
+    fullDesc: 'Professional business cards, flyers, brochures, and promotional items. Everything you need to market your business, from business stationery to event handouts — designed and printed with quality.',
+    image: '/images/work-menu.jpg',
     features: [
-      'Vinyl banners (all sizes)',
-      'Retractable banner stands',
-      'Pop-up displays',
-      'Step & repeat backdrops',
-      'Feather & teardrop flags',
-      'Trade show packages'
+      'Business cards (all finishes)',
+      'Flyers & brochures',
+      'Postcards & door hangers',
+      'Presentation folders',
+      'Stickers & labels',
+      'Menus & table tents'
     ],
-    priceRange: 'From $75',
-    turnaround: '3-5 days'
-  },
-  {
-    id: 'stickers',
-    icon: 'sticker',
-    title: 'Custom Stickers & Labels',
-    shortDesc: 'Branding that sticks',
-    fullDesc: 'Custom die-cut stickers, product labels, and decals — designed and manufactured by us. Perfect for packaging, promotions, and products. Waterproof and durable options available.',
-    image: '/images/work-stickers.jpg',
-    features: [
-      'Die-cut stickers',
-      'Product labels',
-      'Clear stickers',
-      'Holographic options',
-      'Waterproof vinyl',
-      'Sheet labels'
-    ],
-    priceRange: 'From $50',
-    turnaround: '3-5 days'
+    priceRange: 'From $35',
+    turnaround: '2-4 days'
   },
   {
     id: 'events',
     icon: 'wedding',
     title: 'Event Signage',
-    shortDesc: 'Make your event memorable',
-    fullDesc: 'Beautiful custom event signage — from design to finished piece. Welcome signs, seating charts, menus, and decorative pieces for weddings, corporate events, and celebrations.',
+    shortDesc: 'Make events memorable',
+    fullDesc: 'Beautiful custom signage for weddings, parties, corporate events, and celebrations. Welcome signs, seating charts, banners, and decorative pieces — professionally designed and printed.',
     image: '/images/work-wedding.jpg',
     features: [
-      'Welcome signs',
-      'Seating charts',
-      'Menu boards',
+      'Welcome signs & banners',
+      'Seating charts & place cards',
       'Directional signs',
-      'Photo backdrops',
-      'Table numbers'
+      'Photo booth backdrops',
+      'Table numbers & menus',
+      'Party & celebration signs'
     ],
-    priceRange: 'From $85',
-    turnaround: '5-10 days'
-  },
-  {
-    id: 'print',
-    icon: 'print',
-    title: 'Print Design',
-    shortDesc: 'Professional marketing materials',
-    fullDesc: 'Complete print design AND production services. We design and manufacture business cards, flyers, brochures, and marketing materials — quality controlled from start to finish.',
-    image: '/images/work-menu.jpg',
-    features: [
-      'Business cards',
-      'Flyers & brochures',
-      'Posters',
-      'Menus',
-      'Presentation folders',
-      'Direct mail pieces'
-    ],
-    priceRange: 'From $100',
+    priceRange: 'From $45',
     turnaround: '3-5 days'
-  },
-  {
-    id: 'branding',
-    icon: 'brand',
-    title: 'Brand Identity',
-    shortDesc: 'Cohesive brand design',
-    fullDesc: 'Logo design and complete brand identity packages. Plus, we can produce all your branded materials — from business cards to signage — maintaining consistent quality across everything.', 
-    image: '/images/work-branding.jpg',
-    features: [
-      'Logo design',
-      'Color palette',
-      'Typography system',
-      'Brand guidelines',
-      'Business stationery',
-      'Social media assets'
-    ],
-    priceRange: 'From $500',
-    turnaround: '1-2 weeks'
   }
 ];
 
 const processSteps = [
   {
     number: '01',
-    title: 'Consultation',
-    description: 'We discuss your project, goals, and vision. Share inspiration, requirements, and any specific needs.'
+    title: 'Choose Product',
+    description: 'Select from our wide range of banners, signs, displays, and marketing materials.'
   },
   {
     number: '02',
-    title: 'Design',
-    description: 'Our team creates initial concepts based on your brief. We focus on both aesthetics and functionality.'
+    title: 'Customize Design',
+    description: 'Upload your artwork or use our free design tool. Need help? Our designers are here.'
   },
   {
     number: '03',
-    title: 'Revision',
-    description: 'Review the designs and provide feedback. We include unlimited revisions to get it perfect.'
+    title: 'We Print',
+    description: 'State-of-the-art printing with vibrant colors and durable materials. Quality guaranteed.'
   },
   {
     number: '04',
-    title: 'Delivery',
-    description: 'Receive print-ready files or finished physical products, depending on your project needs.'
+    title: 'Fast Delivery',
+    description: 'Shipped directly to your door. Rush options available for tight deadlines.'
   }
 ];
 ---
@@ -153,10 +153,10 @@ const processSteps = [
       <div class="container mx-auto px-6 text-center">
         <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">What We Offer</span>
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
-          Our Services
+          Custom Signs, Banners & Displays
         </h1>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          From concept to completion, we offer comprehensive design services for all your signage and print needs.
+          From vinyl banners to trade show displays, we design and print everything you need to promote your business. Design + Print + Ship — all in one place.
         </p>
       </div>
     </section>
@@ -171,24 +171,24 @@ const processSteps = [
               <div class={index % 2 === 1 ? 'lg:order-2' : ''}>
                 <div class="flex items-center gap-4 mb-4">
                   <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center">
-                    {service.icon === 'signage' && (
-                      <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-                      </svg>
-                    )}
                     {service.icon === 'banner' && (
                       <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                       </svg>
                     )}
-                    {service.icon === 'sticker' && (
+                    {service.icon === 'signage' && (
                       <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
                       </svg>
                     )}
-                    {service.icon === 'wedding' && (
+                    {service.icon === 'flag' && (
                       <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-8a2 2 0 012-2h14a2 2 0 012 2v8M3 7v8a2 2 0 002 2h14a2 2 0 002-2V7M3 7l4-4 4 4 4-4 4 4"/>
+                      </svg>
+                    )}
+                    {service.icon === 'display' && (
+                      <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                       </svg>
                     )}
                     {service.icon === 'print' && (
@@ -196,9 +196,9 @@ const processSteps = [
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
                       </svg>
                     )}
-                    {service.icon === 'brand' && (
+                    {service.icon === 'wedding' && (
                       <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                       </svg>
                     )}
                   </div>
@@ -253,10 +253,10 @@ const processSteps = [
         <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-orange-400 font-semibold text-sm uppercase tracking-wider">How It Works</span>
           <h2 class="text-3xl md:text-4xl font-bold mt-2">
-            Our Design Process
+            Easy 4-Step Process
           </h2>
           <p class="text-gray-400 mt-4">
-            Simple, transparent, and collaborative from start to finish.
+            Design and order your custom products in minutes. We handle the rest.
           </p>
         </div>
         
@@ -272,8 +272,74 @@ const processSteps = [
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Why Choose Us -->
     <section class="section bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Why SignSmith</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+              Design & Print — All in One Place
+            </h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">✓</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Free Design Tool</h3>
+                  <p class="text-gray-600">Easy-to-use online design tool with templates. No design experience needed.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">✓</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Quality Printing</h3>
+                  <p class="text-gray-600">State-of-the-art equipment for vibrant colors and crisp details on every product.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">✓</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Fast Turnaround</h3>
+                  <p class="text-gray-600">Most orders ship in 1-3 business days. Rush options available for urgent needs.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">✓</div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-1">Best Price Guarantee</h3>
+                  <p class="text-gray-600">Competitive pricing without compromising quality. Get more for your budget.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div class="text-4xl font-bold text-orange-500 mb-2">500+</div>
+              <div class="text-gray-600 text-sm">Projects Completed</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div class="text-4xl font-bold text-orange-500 mb-2">4.8★</div>
+              <div class="text-gray-600 text-sm">Customer Rating</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div class="text-4xl font-bold text-orange-500 mb-2">1-3</div>
+              <div class="text-gray-600 text-sm">Day Turnaround</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div class="text-4xl font-bold text-orange-500 mb-2">100%</div>
+              <div class="text-gray-600 text-sm">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-white">
       <div class="container mx-auto px-6 max-w-3xl">
         <div class="text-center mb-12">
           <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
@@ -283,24 +349,24 @@ const processSteps = [
         </div>
         
         <div class="space-y-4">
-          <div class="bg-white rounded-xl p-6">
-            <h3 class="font-semibold text-gray-900 mb-2">Do you handle production or just design?</h3>
-            <p class="text-gray-600">We offer both! We can deliver print-ready files for you to produce locally, or we can handle the entire production and ship finished products to you.</p>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">What's your minimum order quantity?</h3>
+            <p class="text-gray-600">No minimums! Order just one banner or 100 business cards — we handle orders of all sizes.</p>
           </div>
           
-          <div class="bg-white rounded-xl p-6">
-            <h3 class="font-semibold text-gray-900 mb-2">What file formats will I receive?</h3>
-            <p class="text-gray-600">You'll receive high-resolution PDFs, AI/EPS vector files, and PNGs with transparent backgrounds—everything you need for print and digital use.</p>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Can I upload my own design?</h3>
+            <p class="text-gray-600">Absolutely! Upload your print-ready artwork, or use our free design tool with templates. Need help? Our designers can create custom designs too.</p>
           </div>
           
-          <div class="bg-white rounded-xl p-6">
-            <h3 class="font-semibold text-gray-900 mb-2">How many revisions are included?</h3>
-            <p class="text-gray-600">All projects include unlimited revisions. We work until you're completely satisfied with the design.</p>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">How fast can I get my order?</h3>
+            <p class="text-gray-600">Standard turnaround is 1-3 business days for most products. Need it faster? Rush production and expedited shipping are available.</p>
           </div>
           
-          <div class="bg-white rounded-xl p-6">
-            <h3 class="font-semibold text-gray-900 mb-2">Do you offer rush orders?</h3>
-            <p class="text-gray-600">Yes! Rush service is available for most projects. Contact us with your deadline and we'll let you know what we can do.</p>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Do you offer design services?</h3>
+            <p class="text-gray-600">Yes! Our in-house design team can create custom designs for any product. Just share your ideas and we'll bring them to life.</p>
           </div>
         </div>
       </div>
@@ -313,11 +379,16 @@ const processSteps = [
           Ready to Get Started?
         </h2>
         <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-          Contact us today for a free consultation and quote on your project.
+          Get a free quote today. Most orders ship in 1-3 business days!
         </p>
-        <a href="./contact.html" class="btn bg-white text-orange-500 hover:bg-gray-100 text-lg px-8">
-          Request a Quote
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="./contact.html" class="btn bg-white text-orange-500 hover:bg-gray-100 text-lg px-8">
+            Get a Free Quote
+          </a>
+          <a href="./portfolio.html" class="btn border-2 border-white text-white hover:bg-white hover:text-orange-500 text-lg px-8">
+            View Portfolio
+          </a>
+        </div>
       </div>
     </section>
   </main>

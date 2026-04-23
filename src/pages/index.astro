@@ -8,40 +8,40 @@ const pageDescription = "We help small shops, local businesses, and individuals 
 
 const services = [
   {
-    icon: 'signage',
-    title: 'Custom Signage',
-    description: 'Eye-catching signs for businesses, events, and retail spaces. Acrylic, PVC, metal, and more.',
-    link: './services.html#signage'
-  },
-  {
     icon: 'banner',
-    title: 'Banners & Displays',
-    description: 'Vinyl banners, retractable stands, and trade show displays that make an impact.',
+    title: 'Custom Banners',
+    description: 'Vinyl banners, mesh banners, and retractable stands for events, promotions, and advertising.',
     link: './services.html#banners'
   },
   {
-    icon: 'sticker',
-    title: 'Custom Stickers',
-    description: 'Die-cut stickers, labels, and decals for products, packaging, and promotions.',
-    link: './services.html#stickers'
+    icon: 'signage',
+    title: 'Yard Signs & Decals',
+    description: 'Corrugated signs, vehicle magnets, window decals, and floor graphics for any surface.',
+    link: './services.html#signs'
+  },
+  {
+    icon: 'flag',
+    title: 'Advertising Flags',
+    description: 'Feather flags, teardrop flags, and blade flags that wave your message to the world.',
+    link: './services.html#flags'
+  },
+  {
+    icon: 'display',
+    title: 'Trade Show Displays',
+    description: 'Step & repeat backdrops, canopy tents, table covers, and complete booth packages.',
+    link: './services.html#displays'
   },
   {
     icon: 'print',
-    title: 'Print Design',
-    description: 'Business cards, flyers, brochures, and marketing materials designed to impress.',
-    link: './services.html#print'
+    title: 'Marketing Materials',
+    description: 'Business cards, flyers, brochures, stickers, and everything you need to promote your business.',
+    link: './services.html#marketing'
   },
   {
     icon: 'wedding',
     title: 'Event Signage',
-    description: 'Welcome signs, seating charts, and custom pieces for weddings and special events.',
+    description: 'Welcome signs, banners, and custom pieces for weddings, parties, and special events.',
     link: './services.html#events'
-  },
-  {
-    icon: 'brand',
-    title: 'Brand Identity',
-    description: 'Logo design and cohesive branding packages to elevate your business image.',
-    link: './services.html#branding'
   }
 ];
 
@@ -237,6 +237,16 @@ const testimonials = [
                 {service.icon === 'brand' && (
                   <svg class="w-7 h-7 text-orange-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                  </svg>
+                )}
+                {service.icon === 'flag' && (
+                  <svg class="w-7 h-7 text-orange-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-8a2 2 0 012-2h14a2 2 0 012 2v8M3 7v8a2 2 0 002 2h14a2 2 0 002-2V7M3 7l4-4 4 4 4-4 4 4"/>
+                  </svg>
+                )}
+                {service.icon === 'display' && (
+                  <svg class="w-7 h-7 text-orange-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                   </svg>
                 )}
               </div>
